@@ -153,7 +153,7 @@
                 option.code === locale
                   ? isDark
                     ? 'border-accent/70 bg-accent text-night shadow-glow'
-                    : 'border-accent/80 bg-accent text-white shadow'
+                    : 'border-accent/80 bg-accent !text-white shadow'
                   : isDark
                   ? 'border-white/10 bg-white/5 hover:border-white/20 text-slate-200'
                   : 'border-slate-200 bg-white/90 hover:border-slate-300 text-slate-700'

@@ -45,13 +45,13 @@
               class="font-semibold"
               :class="isDark ? 'text-white' : 'text-slate-900'"
             >
-              {{ feature.title?.loc?.source }}
+              {{ feature.title }}
             </p>
             <p
               class="text-sm"
               :class="isDark ? 'text-slate-300' : 'text-slate-600'"
             >
-              {{ feature.description?.loc?.source }}
+              {{ feature.description }}
             </p>
           </div>
         </div>
@@ -115,13 +115,13 @@
               class="font-semibold"
               :class="isDark ? 'text-white' : 'text-slate-900'"
             >
-              {{ card.title?.loc?.source }}
+              {{ card.title }}
             </p>
             <p
               class="text-sm"
               :class="isDark ? 'text-slate-300' : 'text-slate-600'"
             >
-              {{ card.body?.loc?.source }}
+              {{ card.body }}
             </p>
           </div>
         </div>
@@ -132,20 +132,37 @@
 
 <script setup lang="ts">
 const isDark = useState("theme-dark", () => true);
-const { t, tm } = useI18n();
+const { t, tm, locale, messages } = useI18n();
+
+const getLocaleArray = (path: string) => {
+  const segments = path.split(".");
+  let current: any = messages.value?.[locale.value];
+  for (const segment of segments) {
+    current = current?.[segment];
+  }
+  return Array.isArray(current) ? current : [];
+};
+
+const normalizeItem = (item: any) => ({
+  title: item?.title?.loc?.source ?? item?.title ?? "",
+  description: item?.description?.loc?.source ?? item?.description ?? "",
+});
+
+const normalizeCapability = (item: any) => ({
+  title: item?.title?.loc?.source ?? item?.title ?? "",
+  body: item?.body?.loc?.source ?? item?.body ?? "",
+  icon: item?.icon?.loc?.source ?? item?.icon ?? "•",
+});
 
 const seoFeatures = computed(() => {
   const val = tm("about.features") as unknown;
-  return Array.isArray(val) ? val : [];
+  const items = Array.isArray(val) ? val : getLocaleArray("about.features");
+  return items.map(normalizeItem);
 });
 
 const capabilityCards = computed(() => {
   const val = tm("about.capabilities") as unknown;
-  const items = Array.isArray(val) ? val : [];
-  return items.map((item: any) => ({
-    title: item?.title ?? "",
-    body: item?.body ?? "",
-    icon: item?.icon || "•",
-  }));
+  const items = Array.isArray(val) ? val : getLocaleArray("about.capabilities");
+  return items.map(normalizeCapability);
 });
 </script>
