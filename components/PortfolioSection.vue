@@ -50,7 +50,7 @@
         <div class="relative h-44 w-full overflow-hidden">
           <img
             :src="item.image"
-            :alt="item.title?.loc?.source"
+            :alt="item.title"
             class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
             loading="lazy"
           />
@@ -76,10 +76,10 @@
             class="font-display text-xl font-semibold"
             :class="isDark ? 'text-white' : 'text-slate-900'"
           >
-            {{ item.title?.loc?.source }}
+            {{ item.title }}
           </h4>
           <p :class="isDark ? 'text-slate-300' : 'text-slate-600'">
-            {{ item.description?.loc?.source }}
+            {{ item.description }}
           </p>
         </div>
       </article>
@@ -147,10 +147,10 @@
               class="font-display text-2xl font-semibold"
               :class="isDark ? 'text-white' : 'text-slate-900'"
             >
-              {{ activeItem.title?.loc?.source }}
+              {{ activeItem.title }}
             </h4>
             <p :class="isDark ? 'text-slate-300' : 'text-slate-600'">
-              {{ activeItem.description?.loc?.source }}
+              {{ activeItem.description }}
             </p>
           </div>
         </div>
@@ -161,7 +161,7 @@
 
 <script setup lang="ts">
 const isDark = useState("theme-dark", () => true);
-const { t, tm } = useI18n();
+const { t } = useI18n();
 
 type PortfolioItem = {
   title: string;
@@ -187,69 +187,81 @@ const filters: FilterOption[] = [
   FilterOption.InternalSystems,
 ];
 
-const portfolioBase: PortfolioItem[] = [
+const portfolioEntries: (PortfolioItem & {
+  titleKey: string;
+  descriptionKey: string;
+})[] = [
   {
-    title: "CoSafe Mobile",
-    description:
-      "Emergency readiness with incident logging, alerts, and offline protocols.",
+    titleKey: "portfolio.items.0.title",
+    descriptionKey: "portfolio.items.0.description",
     image: asset("cosafe.webp"),
     categories: [FilterOption.MobileApps, FilterOption.InternalSystems],
+    title: "",
+    description: "",
   },
   {
-    title: "Senior Care",
-    description:
-      "Caregiver coordination with assessments, med tracking, and tasks.",
+    titleKey: "portfolio.items.1.title",
+    descriptionKey: "portfolio.items.1.description",
     image: asset("senior.webp"),
     categories: [FilterOption.MobileApps, FilterOption.InternalSystems],
+    title: "",
+    description: "",
   },
   {
-    title: "1Touch Business",
-    description:
-      "Ride, courier, and wallet flows in one streamlined native experience.",
+    titleKey: "portfolio.items.2.title",
+    descriptionKey: "portfolio.items.2.description",
     image: asset("1touch-buisiness.webp"),
     categories: [FilterOption.MobileApps],
+    title: "",
+    description: "",
   },
   {
-    title: "AppointUs Web",
-    description:
-      "Scheduling marketplace with vendor storefronts and payment automation.",
+    titleKey: "portfolio.items.3.title",
+    descriptionKey: "portfolio.items.3.description",
     image: asset("appoint-us.webp"),
     categories: [FilterOption.Websites],
+    title: "",
+    description: "",
   },
   {
-    title: "1Touch Client",
-    description:
-      "Everyday rider app with bookings, loyalty, and payment layers.",
+    titleKey: "portfolio.items.4.title",
+    descriptionKey: "portfolio.items.4.description",
     image: asset("1touch.webp"),
     categories: [FilterOption.MobileApps],
+    title: "",
+    description: "",
   },
   {
-    title: "1Touch Client Web",
-    description:
-      "Dispatching, billing, and partner controls built for high-volume ops.",
+    titleKey: "portfolio.items.5.title",
+    descriptionKey: "portfolio.items.5.description",
     image: asset("1touch-web.webp"),
     categories: [FilterOption.InternalSystems, FilterOption.Websites],
+    title: "",
+    description: "",
   },
   {
-    title: "AppointUs Admin",
-    description:
-      "Admin hub for schedules, payouts, and vendor lifecycle management.",
+    titleKey: "portfolio.items.6.title",
+    descriptionKey: "portfolio.items.6.description",
     image: asset("appoint-us-admin.webp"),
     categories: [FilterOption.InternalSystems, FilterOption.Websites],
+    title: "",
+    description: "",
   },
   {
-    title: "Graviti",
-    description:
-      "Installment checkout with eligibility scoring and merchant insights.",
+    titleKey: "portfolio.items.7.title",
+    descriptionKey: "portfolio.items.7.description",
     image: asset("graviti.webp"),
     categories: [FilterOption.MobileApps, FilterOption.InternalSystems],
+    title: "",
+    description: "",
   },
   {
-    title: "AppointUs Client",
-    description:
-      "Client-side booking app with messaging, reminders, and loyalty perks.",
+    titleKey: "portfolio.items.8.title",
+    descriptionKey: "portfolio.items.8.description",
     image: asset("appoint-us-client.webp"),
     categories: [FilterOption.MobileApps],
+    title: "",
+    description: "",
   },
 ];
 
@@ -257,15 +269,18 @@ const activeItem = ref<PortfolioItem | null>(null);
 const activeIndex = ref(0);
 const activeFilter = ref<FilterOption>(FilterOption.All);
 
-const portfolio = computed<PortfolioItem[]>(() => {
-  const translated = tm("portfolio.items") as unknown;
-  const items = Array.isArray(translated) ? translated : [];
-  return portfolioBase.map((item, idx) => ({
-    ...item,
-    title: items[idx]?.title ?? item.title,
-    description: items[idx]?.description ?? item.description,
+const translateEntries = <T extends { titleKey: string; descriptionKey: string }>(
+  entries: (T & PortfolioItem)[]
+) =>
+  entries.map((entry) => ({
+    ...entry,
+    title: t(entry.titleKey),
+    description: t(entry.descriptionKey),
   }));
-});
+
+const portfolio = computed<PortfolioItem[]>(() =>
+  translateEntries(portfolioEntries)
+);
 
 const filteredPortfolio = computed(() =>
   activeFilter.value === FilterOption.All

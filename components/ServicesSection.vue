@@ -43,10 +43,10 @@
           class="font-display text-xl font-semibold"
           :class="isDark ? 'text-white' : 'text-slate-900'"
         >
-          {{ item.title?.loc?.source }}
+          {{ item.title }}
         </h4>
         <p class="mt-2" :class="isDark ? 'text-slate-300' : 'text-slate-600'">
-          {{ item.description?.loc?.source }}
+          {{ item.description }}
         </p>
       </article>
     </div>
@@ -59,15 +59,25 @@ type ServiceItem = {
   description: string;
 };
 
-const { t, tm } = useI18n();
-const services = computed<ServiceItem[]>(() => {
-  const val = tm("services.items") as unknown;
-  const items = Array.isArray(val) ? val : [];
-  return items.map((item: any) => ({
-    title: item?.title ?? "",
-    description: item?.description ?? "",
-  }));
-});
-const serviceIcons = ["📱", "💻", "☁️", "🎨", "🏢", "🧭"];
 const isDark = useState("theme-dark", () => true);
+const { t } = useI18n();
+
+const serviceEntries: { titleKey: string; descriptionKey: string }[] = [
+  { titleKey: "services.items.0.title", descriptionKey: "services.items.0.description" },
+  { titleKey: "services.items.1.title", descriptionKey: "services.items.1.description" },
+  { titleKey: "services.items.2.title", descriptionKey: "services.items.2.description" },
+  { titleKey: "services.items.3.title", descriptionKey: "services.items.3.description" },
+  { titleKey: "services.items.4.title", descriptionKey: "services.items.4.description" },
+  { titleKey: "services.items.5.title", descriptionKey: "services.items.5.description" },
+];
+
+const translateEntries = (entries: { titleKey: string; descriptionKey: string }[]) =>
+  entries.map((entry) => ({
+    title: t(entry.titleKey),
+    description: t(entry.descriptionKey),
+  }));
+
+const services = computed<ServiceItem[]>(() => translateEntries(serviceEntries));
+
+const serviceIcons = ["📱", "💻", "☁️", "🎨", "🏢", "🧭"];
 </script>

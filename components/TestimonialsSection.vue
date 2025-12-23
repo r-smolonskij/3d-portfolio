@@ -104,35 +104,35 @@
                   class="text-lg"
                   :class="isDark ? 'text-slate-100' : 'text-slate-900'"
                 >
-                  “{{ testimonial.quote?.loc?.source }}”
+                  “{{ testimonial.quote }}”
                 </p>
                 <div class="flex items-center gap-3">
-                  <div
-                    class="flex h-12 w-12 items-center justify-center rounded-full text-xl"
-                    :class="
-                      isDark
-                        ? 'bg-white/10 text-white'
-                        : 'bg-accent/30 text-night'
-                    "
-                  >
-                    {{ testimonial.initials?.loc?.source }}
-                  </div>
-                  <div>
-                    <p
-                      class="font-semibold"
-                      :class="isDark ? 'text-white' : 'text-slate-900'"
-                    >
-                      {{ testimonial.name?.loc?.source }}
-                    </p>
-                    <!-- <p
-                      class="text-sm"
-                      :class="isDark ? 'text-slate-400' : 'text-slate-600'"
-                    >
-                      {{ testimonial.role }}
-                    </p> -->
-                  </div>
-                </div>
-              </article>
+          <div
+            class="flex h-12 w-12 items-center justify-center rounded-full text-xl"
+            :class="
+              isDark
+                ? 'bg-white/10 text-white'
+                : 'bg-accent/30 text-night'
+            "
+          >
+            {{ testimonial.initials }}
+          </div>
+          <div>
+            <p
+              class="font-semibold"
+              :class="isDark ? 'text-white' : 'text-slate-900'"
+            >
+              {{ testimonial.name }}
+            </p>
+            <!-- <p
+              class="text-sm"
+              :class="isDark ? 'text-slate-400' : 'text-slate-600'"
+            >
+              {{ testimonial.role }}
+            </p> -->
+          </div>
+        </div>
+      </article>
             </div>
           </div>
         </div>
@@ -162,7 +162,7 @@
 
 <script setup lang="ts">
 const isDark = useState("theme-dark", () => true);
-const { t, tm } = useI18n();
+const { t } = useI18n();
 
 type Testimonial = {
   quote: string;
@@ -173,16 +173,75 @@ type Testimonial = {
 
 const perSlide = 3;
 
-const testimonials = computed<Testimonial[]>(() => {
-  const val = tm("testimonials.items") as unknown;
-  const items = Array.isArray(val) ? val : [];
-  return items.map((item: any) => ({
-    quote: item?.quote ?? "",
-    name: item?.name ?? "",
-    role: item?.role ?? "",
-    initials: item?.initials ?? "",
+const testimonialEntries: { quoteKey: string; nameKey: string; roleKey: string; initialsKey: string }[] =
+  [
+    {
+      quoteKey: "testimonials.items.0.quote",
+      nameKey: "testimonials.items.0.name",
+      roleKey: "testimonials.items.0.role",
+      initialsKey: "testimonials.items.0.initials",
+    },
+    {
+      quoteKey: "testimonials.items.1.quote",
+      nameKey: "testimonials.items.1.name",
+      roleKey: "testimonials.items.1.role",
+      initialsKey: "testimonials.items.1.initials",
+    },
+    {
+      quoteKey: "testimonials.items.2.quote",
+      nameKey: "testimonials.items.2.name",
+      roleKey: "testimonials.items.2.role",
+      initialsKey: "testimonials.items.2.initials",
+    },
+    {
+      quoteKey: "testimonials.items.3.quote",
+      nameKey: "testimonials.items.3.name",
+      roleKey: "testimonials.items.3.role",
+      initialsKey: "testimonials.items.3.initials",
+    },
+    {
+      quoteKey: "testimonials.items.4.quote",
+      nameKey: "testimonials.items.4.name",
+      roleKey: "testimonials.items.4.role",
+      initialsKey: "testimonials.items.4.initials",
+    },
+    {
+      quoteKey: "testimonials.items.5.quote",
+      nameKey: "testimonials.items.5.name",
+      roleKey: "testimonials.items.5.role",
+      initialsKey: "testimonials.items.5.initials",
+    },
+    {
+      quoteKey: "testimonials.items.6.quote",
+      nameKey: "testimonials.items.6.name",
+      roleKey: "testimonials.items.6.role",
+      initialsKey: "testimonials.items.6.initials",
+    },
+    {
+      quoteKey: "testimonials.items.7.quote",
+      nameKey: "testimonials.items.7.name",
+      roleKey: "testimonials.items.7.role",
+      initialsKey: "testimonials.items.7.initials",
+    },
+    {
+      quoteKey: "testimonials.items.8.quote",
+      nameKey: "testimonials.items.8.name",
+      roleKey: "testimonials.items.8.role",
+      initialsKey: "testimonials.items.8.initials",
+    },
+  ];
+
+const translateTestimonials = (entries: typeof testimonialEntries): Testimonial[] =>
+  entries.map((entry) => ({
+    quote: t(entry.quoteKey),
+    name: t(entry.nameKey),
+    role: t(entry.roleKey),
+    initials: t(entry.initialsKey),
   }));
-});
+
+const testimonials = computed<Testimonial[]>(() =>
+  translateTestimonials(testimonialEntries)
+);
 
 const slides = computed<Testimonial[][]>(() => {
   const chunks: Testimonial[][] = [];
