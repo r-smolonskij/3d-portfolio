@@ -108,7 +108,7 @@
               isDark ? 'bg-white/10 text-white' : 'bg-slate-200 text-slate-800'
             "
           >
-            {{ card.icon?.loc?.source }}
+            {{ card.icon }}
           </div>
           <div class="space-y-1">
             <p
@@ -132,35 +132,33 @@
 
 <script setup lang="ts">
 const isDark = useState("theme-dark", () => true);
-const { t, tm, locale, messages } = useI18n();
+const { t } = useI18n();
 
-const getLocaleArray = (path: string) => {
-  const segments = path.split(".");
-  let current: any = messages.value?.[locale.value];
-  for (const segment of segments) {
-    current = current?.[segment];
-  }
-  return Array.isArray(current) ? current : [];
-};
+const featureEntries = [
+  { titleKey: "about.features.0.title", descriptionKey: "about.features.0.description" },
+  { titleKey: "about.features.1.title", descriptionKey: "about.features.1.description" },
+  { titleKey: "about.features.2.title", descriptionKey: "about.features.2.description" },
+  { titleKey: "about.features.3.title", descriptionKey: "about.features.3.description" },
+];
 
-const normalizeItem = (item: any) => ({
-  title: item?.title?.loc?.source ?? item?.title?.t?.s ?? "",
-  description: item?.description?.loc?.source ?? item?.description?.t?.s ?? "",
-});
+const capabilityEntries = [
+  { titleKey: "about.capabilities.0.title", bodyKey: "about.capabilities.0.body", icon: "🚀" },
+  { titleKey: "about.capabilities.1.title", bodyKey: "about.capabilities.1.body", icon: "📊" },
+  { titleKey: "about.capabilities.2.title", bodyKey: "about.capabilities.2.body", icon: "🛡️" },
+];
 
-const normalizeCapability = (item: any) => ({
-  title: item?.title?.loc?.source ?? item?.title?.t?.s ?? "",
-  body: item?.body?.loc?.source ?? item?.body?.t?.s ?? "",
-  icon: item?.icon?.loc?.source ?? item?.icon?.t?.s ?? "•",
-});
+const seoFeatures = computed(() =>
+  featureEntries.map((entry) => ({
+    title: t(entry.titleKey),
+    description: t(entry.descriptionKey),
+  }))
+);
 
-const seoFeatures = computed(() => {
-  const items = getLocaleArray("about.features");
-  return items.map(normalizeItem);
-});
-
-const capabilityCards = computed(() => {
-  const items = getLocaleArray("about.capabilities");
-  return items.map(normalizeCapability);
-});
+const capabilityCards = computed(() =>
+  capabilityEntries.map((entry) => ({
+    title: t(entry.titleKey),
+    body: t(entry.bodyKey),
+    icon: entry.icon,
+  }))
+);
 </script>
