@@ -155,14 +155,12 @@ const normalizeCapability = (item: any) => ({
 });
 
 const seoFeatures = computed(() => {
-  const val = tm("about.features") as unknown;
-  const items = Array.isArray(val) ? val : getLocaleArray("about.features");
+  const items = getLocaleArray("about.features");
   return items.map(normalizeItem);
 });
 
 const capabilityCards = computed(() => {
-  const val = tm("about.capabilities") as unknown;
-  const items = Array.isArray(val) ? val : getLocaleArray("about.capabilities");
+  const items = getLocaleArray("about.capabilities");
   return items.map(normalizeCapability);
 });
 </script>
