@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-body: #f8fafc;
+  --text-body: #0f172a;
+  --glass-bg: rgba(226, 232, 240, 0.92);
+  --glass-border: rgba(148, 163, 184, 0.55);
+  --accent: #0d9488;
+  --accent-2: #4338ca;
+}
+
+.dark {
+  --bg-body: #0b1021;
+  --text-body: #e2e8f0;
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --accent: #52e1e2;
+  --accent-2: #6f7cff;
+}
+
+body {
+  @apply font-body antialiased;
+  background: var(--bg-body);
+  color: var(--text-body);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.glass {
+  @apply backdrop-blur-xl;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+}
+
+.reveal-init {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal-init[data-reveal='left'] {
+  transform: translateX(-40px);
+}
+
+.reveal-init[data-reveal='right'] {
+  transform: translateX(40px);
+}
+
+.reveal-init[data-reveal='down'] {
+  transform: translateY(-30px);
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+/* Improve text contrast in light mode */
+html:not(.dark) .text-white,
+html:not(.dark) .text-slate-100,
+html:not(.dark) .text-slate-200 {
+  color: #0f172a !important;
+}
+html:not(.dark) .text-slate-300 {
+  color: #1f2937 !important;
+}
+html:not(.dark) .text-slate-400 {
+  color: #334155 !important;
+}
+html:not(.dark) .text-night {
+  color: #ffffff !important;
+}
+
+/* Accent colors driven by CSS variables for light/dark */
+.text-accent {
+  color: var(--accent) !important;
+}
+.bg-accent {
+  background-color: var(--accent) !important;
+}
+.from-accent {
+  --tw-gradient-from: var(--accent) !important;
+  --tw-gradient-to: rgb(255 255 255 / 0) !important;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important;
+}
+.to-accent-2 {
+  --tw-gradient-to: var(--accent-2) !important;
+}
+.from-accent-2 {
+  --tw-gradient-from: var(--accent-2) !important;
+  --tw-gradient-to: rgb(255 255 255 / 0) !important;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important;
+}
+.bg-accent-2 {
+  background-color: var(--accent-2) !important;
+}

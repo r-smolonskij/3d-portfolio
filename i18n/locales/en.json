@@ -1,0 +1,246 @@
+{
+  "header": {
+    "tagline": "Mobile app and web development agency"
+  },
+  "portfolio": {
+    "title": "Selected work",
+    "subtitle": "Representative projects with clear value.",
+    "filters": {
+      "all": "All",
+      "websites": "Websites",
+      "mobile": "Mobile apps",
+      "internal": "Internal systems"
+    },
+    "items": [
+      {
+        "title": "CoSafe",
+        "description": "A digital safety solution that helps organizations improve employee safety, communication, and emergency response. It centralizes safety processes, reports, and incidents in real time to reduce risk and build trust."
+      },
+      {
+        "title": "Senior Group",
+        "description": "An internal system for senior care homes to manage client and staff records and daily care processes. It makes it easy to log visits, generate reports, and centralize information to boost efficiency and care quality."
+      },
+      {
+        "title": "1Touch Business",
+        "description": "A mobile app for specialists to manage services, clients, and bookings in one place, with calendar planning. It automates payments, invoices, and reports to control cash flow and run daily work efficiently."
+      },
+      {
+        "title": "AppointUs Web",
+        "description": "A website that clearly presents company services and products to strengthen brand trust online. It helps customers quickly find information, see the value, and easily reach out or take next steps."
+      },
+      {
+        "title": "1Touch Client",
+        "description": "A client mobile app to find specialists, book services, and manage visits in one place. It keeps bookings, payments, and communication clear for simple, transparent service delivery."
+      },
+      {
+        "title": "1Touch Client Web",
+        "description": "A client web app to find specialists, book services, and manage visits from any device. It keeps bookings, payments, and communication transparent for reliable service delivery."
+      },
+      {
+        "title": "AppointUs Admin",
+        "description": "An employee admin PWA optimized for phones. Staff manage schedules, tasks, and client info, tracking visits and reports in real time."
+      },
+      {
+        "title": "Graviti",
+        "description": "A mobile app for booking shipping containers, letting customers reserve, track status, and manage bookings. Admins centrally control data, availability, billing, and reporting for efficient logistics."
+      },
+      {
+        "title": "AppointUs Client",
+        "description": "A client web app to find specialists, book services, and manage visits from any device. It keeps bookings, payments, and communication transparent for reliable service delivery."
+      }
+    ]
+  },
+  "nav": {
+    "about": "About",
+    "services": "Services",
+    "testimonials": "Testimonials",
+    "portfolio": "Portfolio",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge": "Personalized solutions for every client",
+    "title": "Digital products that turn ideas into reality",
+    "subtitle": "We plan and build multiplatform solutions tailored precisely to each client’s goals and requirements.",
+    "ctaPrimary": "Get in touch",
+    "ctaSecondary": "Write to us"
+  },
+  "about": {
+    "title": "Who we are and how we help businesses",
+    "lead": "MobWebTech is a mobile and web development studio that blends strategy and engineering to build products with strong market impact.",
+    "body": "We connect business goals with modern technology: concepts, prototypes, MVPs, and production releases with maintenance and data security included.",
+    "metrics": {
+      "projects": "20+ delivered projects",
+      "satisfaction": "33+ client satisfaction",
+      "response": "Response within 24h"
+    },
+    "capabilitiesLabel": "Capabilities",
+    "capabilitiesTitle": "Engineering-first delivery with measurable checkpoints every sprint.",
+    "capabilitiesBody": "We focus on reliability, observability, and readiness to hand the product over to your customers.",
+    "metricCaptions": {
+      "projects": "Project delivery from start to launch",
+      "satisfaction": "Caring about meeting client needs",
+      "response": "Fast and pleasant communication"
+    },
+    "features": [
+      {
+        "title": "Mobile and web app experts",
+        "description": "Native iOS/Android and responsive web apps focused on performance and accessibility."
+      },
+      {
+        "title": "Secure, scalable architectures",
+        "description": "CI/CD, observability, and compliance to keep releases predictable."
+      },
+      {
+        "title": "System integrations and analytics",
+        "description": "APIs, data flows, and telemetry that connect platforms and provide insight."
+      },
+      {
+        "title": "Growth-focused delivery",
+        "description": "Discovery, MVPs, and iterative releases tied to business KPIs."
+      }
+    ],
+    "capabilities": [
+      {
+        "icon": "🚀",
+        "title": "Ready for launch",
+        "body": "Building products from prototype to a polished, production-ready experience."
+      },
+      {
+        "icon": "📊",
+        "title": "Data on hand",
+        "body": "Event tracking, analytics, and reporting to see impact in real time."
+      },
+      {
+        "icon": "🛡️",
+        "title": "Security first",
+        "body": "Secure authentication, user management, and compliance built into the architecture."
+      }
+    ]
+  },
+  "technologies": {
+    "title": "Technologies we use",
+    "subtitle": "A sample of our core stack — we support many more libraries and platforms.",
+    "stack": [
+      "Nuxt 3",
+      "Vue 3",
+      "TypeScript",
+      "Tailwind CSS",
+      "Three.js",
+      "Node.js",
+      "Firebase",
+      "Supabase"
+    ]
+  },
+  "services": {
+    "title": "What we deliver",
+    "subtitle": "From idea to maintenance – focused on performance, accessibility, and security.",
+    "items": [
+      {
+        "title": "Mobile app development",
+        "description": "We build convenient, fast mobile apps for iPhone and Android that reach customers on their phones, run reliably, and are ready to grow."
+      },
+      {
+        "title": "Web platforms",
+        "description": "We craft modern websites, portals, and admin panels that strengthen your brand, are safe to use, and accessible on any device."
+      },
+      {
+        "title": "SaaS products",
+        "description": "We build subscription-based digital products that generate recurring revenue, simplify customer management, and let your business scale without technical blockers."
+      },
+      {
+        "title": "Design systems",
+        "description": "We create a unified design approach that makes your digital solutions recognizable, easy to maintain, and faster to extend with new features."
+      },
+      {
+        "title": "Internal systems",
+        "description": "We automate internal processes with tailored tools that cut manual work, prevent errors, and give leadership a clear overview of operations."
+      },
+      {
+        "title": "Technical consulting",
+        "description": "We provide clear technical guidance to make informed decisions, improve performance, and lower long-term costs."
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Client voices",
+    "subtitle": "Reflections from product and engineering leaders we support.",
+    "badge": "Trusted delivery",
+    "highlight": "Predictable releases and thoughtful partnership",
+    "items": [
+      {
+        "quote": "MobWebTech turned prototypes into fully production-ready user flows without losing quality. The team consistently thinks in business outcomes, not just technical delivery.",
+        "name": "Laura Mežkalne",
+        "role": "Product Lead, FlowNav",
+        "initials": "LM"
+      },
+      {
+        "quote": "The team precisely surfaced risks, added observability, and kept releases stable without delays. The architecture they built inspires long-term confidence.",
+        "name": "Dmitry Volkonsky",
+        "role": "CTO, Atlas Cloud",
+        "initials": "DV"
+      },
+      {
+        "quote": "Tight alignment between design and development is their edge. Users understood the product quickly, and we could validate market demand fast.",
+        "name": "Anna Peterson",
+        "role": "Co-founder, MobWebTech Health",
+        "initials": "AP"
+      },
+      {
+        "quote": "MobWebTech brought clarity to the roadmap and helped us keep steady velocity with clear, measurable iteration goals.",
+        "name": "Henrik Hussfelt",
+        "role": "Product Owner, Baltic Mobility",
+        "initials": "RO"
+      },
+      {
+        "quote": "The detailed technical audit let us rebuild the APIs with no downtime and significantly improve performance—about 40%.",
+        "name": "Edgars Klauve",
+        "role": "Engineering Manager, Nord Fintech",
+        "initials": "MK"
+      },
+      {
+        "quote": "The team proactively anticipated risks and always came back with practical, actionable fixes instead of just a problem list.",
+        "name": "Mārtiņš B.",
+        "role": "Program Director, AirWave",
+        "initials": "KL"
+      },
+      {
+        "quote": "The visuals and 3D elements made sales much easier—we could demo prototypes without long, complex presentations.",
+        "name": "Elīna Jansone",
+        "role": "Marketing Lead, Vivid IoT",
+        "initials": "EJ"
+      },
+      {
+        "quote": "The team quickly built a component system that became the foundation and quality bar for our other products too.",
+        "name": "Anna Bērziņa",
+        "role": "Head of Product Design, Lumen Apps",
+        "initials": "MD"
+      },
+      {
+        "quote": "Open communication, transparent costs, and a delivery cadence we could rely on every sprint.",
+        "name": "Astrīda Zaļkalne",
+        "role": "COO, Baltic Freight",
+        "initials": "SG"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Let’s talk?",
+    "subtitle": "Share your idea or challenge and we will respond fast.",
+    "addressLabel": "Address",
+    "phoneLabel": "Phone",
+    "emailLabel": "Email",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "submit": "Send request",
+      "sending": "Sending...",
+      "success": "Thanks! We will respond within one business day.",
+      "sendAnother": "Send another message",
+      "error": "Could not send the message. Please try again."
+    }
+  },
+  "footer": {
+    "tagline": "We craft products that engage, persuade, and scale with your business."
+  }
+}

@@ -1,0 +1,247 @@
+{
+  "header": {
+    "tagline": "Mobilo aplikāciju un web izstrādes aģentūra"
+  },
+  "portfolio": {
+    "title": "Mūsu darbi",
+    "subtitle": "Atlasīti projekti ar fokusētu vērtības piedāvājumu.",
+    "filters": {
+      "all": "Visi",
+      "websites": "Tīmekļa lapas",
+      "mobile": "Mobilās lietotnes",
+      "internal": "Iekšējās sistēmas"
+    },
+    "items": [
+      {
+        "title": "CoSafe",
+        "description": "Digitāls drošības risinājums, kas palīdz organizācijām uzlabot darbinieku drošību, komunikāciju un reaģēšanu ārkārtas situācijās. Tas ļauj centralizēti pārvaldīt drošības procesus, ziņojumus un notikumus reāllaikā, samazinot riskus un palielinot uzticamību."
+      },
+      {
+        "title": "Senior Group",
+        "description": "Iekšējā sistēma senioru aprūpes mājām, kas palīdz pārskatāmi pārvaldīt klientu un darbinieku uzskaiti, kā arī ikdienas aprūpes procesus. Tā ļauj ērti reģistrēt vizītes, ģenerēt atskaites un centralizēt informāciju, uzlabojot darba efektivitāti un aprūpes kvalitāti."
+      },
+      {
+        "title": "1Touch Business",
+        "description": "Mobilā aplikācija speciālistiem, kas ļauj vienuviet pārvaldīt savus pakalpojumus, klientus un rezervācijas, kā arī ērti plānot darba kalendāru. Tā nodrošina automātisku norēķinu, rēķinu un atskaišu ģenerēšanu, palīdzot kontrolēt naudas plūsmu un efektīvāk vadīt ikdienas darbu."
+      },
+      {
+        "title": "AppointUs Web",
+        "description": "Web lapa, kas pārskatāmi reprezentē uzņēmuma piedāvātos pakalpojumus, servisus un produktus, stiprinot zīmola uzticamību tiešsaistē. Tā ļauj klientiem ātri atrast nepieciešamo informāciju, saprast piedāvājuma vērtību un ērti sazināties vai veikt nākamos soļus."
+      },
+      {
+        "title": "1Touch Client",
+        "description": "Klientu mobilā aplikācija, kas ļauj viegli atrast speciālistus, rezervēt pakalpojumus un pārvaldīt savas vizītes vienuviet. Tā nodrošina skaidru pārskatu par rezervācijām, maksājumiem un saziņu, padarot pakalpojumu saņemšanu vienkāršu un pārskatāmu."
+      },
+      {
+        "title": "1Touch Client Web",
+        "description": "Klientu web aplikācija, kas ļauj no jebkuras ierīces atrast speciālistus, rezervēt pakalpojumus un pārvaldīt savas vizītes. Tā nodrošina pārskatāmu informāciju par rezervācijām, maksājumiem un saziņu, padarot pakalpojumu saņemšanu vienkāršu un uzticamu."
+      },
+      {
+        "title": "AppointUs Admin",
+        "description": "Darbinieku administrācijas panelis PWA formātā ir mobilajām ierīcēm pielāgots risinājums, ko var ērti uzinstalēt telefonā un izmantot kā lietotni. Tas ļauj darbiniekiem pārvaldīt grafikus, uzdevumus un klientu informāciju, kā arī sekot līdzi vizītēm un atskaitēm reāllaikā."
+      },
+      {
+        "title": "Graviti",
+        "description": "Mobilā aplikācija kuģu konteineru rezervēšanai, kas ļauj klientiem ērti rezervēt konteinerus, sekot pasūtījumu statusam un pārvaldīt savas rezervācijas. Savukārt administratoriem tā nodrošina centralizētu visu datu, pieejamības, norēķinu un atskaišu pārvaldību, nodrošinot efektīvu un pārskatāmu loģistikas procesu."
+      },
+      {
+        "title": "AppointUs Client",
+        "description": "Klientu web aplikācija, kas ļauj no jebkuras ierīces atrast speciālistus, rezervēt pakalpojumus un pārvaldīt savas vizītes. Tā nodrošina pārskatāmu informāciju par rezervācijām, maksājumiem un saziņu, padarot pakalpojumu saņemšanu vienkāršu un uzticamu."
+      }
+    ]
+  },
+  "nav": {
+    "about": "Par mums",
+    "services": "Pakalpojumi",
+    "testimonials": "Atsauksmes",
+    "portfolio": "Darbi",
+    "contact": "Kontakti"
+  },
+  "hero": {
+    "badge": "Personalizēti risinājumi katram klientam",
+    "title": "Digitālie produkti, kas pārvērš idejas realitātē",
+    "subtitle": "Plānojam un izstrādājam multiplatformu risinājumus, kas paredzēti tieši klientu vēlmēm un prasībām.",
+    "ctaPrimary": "Sazināties",
+    "ctaSecondary": "Uzrakstiet mums"
+  },
+  "about": {
+    "title": "Kas mēs esam un kā palīdzam biznesam",
+    "lead": "MobWebTech ir mobilās un web izstrādes studija, kas apvieno stratēģiju un inženieriju, lai veidotu produktus ar spēcīgu tirgus efektu.",
+    "body": "Savieno­jam biznesa mērķus ar modernām tehnoloģijām: veidojam konceptus, prototipus, MVP un produkcijas versijas, nodrošinot uzturēšanu un datu drošību.",
+    "metrics": {
+      "projects": "20+ realizētu projektu",
+      "satisfaction": "33+ klientu apmierinātība",
+      "response": "Atbildam 24 stundu laikā"
+    },
+    "capabilitiesLabel": "Spējas",
+    "capabilitiesTitle": "Inženierija vispirms ar izmērāmiem kontrolpunktiem katrā sprintā.",
+    "capabilitiesBody": "Fokusējamies uz uzticamību, novērojamību un gatavību produkta nodošanai klientu lietošanai.",
+    "metricCaptions": {
+      "projects": "Projektu izstrāde no sākuma līdz pašām beigām",
+      "satisfaction": "Rūpes par klienta vēlmju nodrosināšanu",
+      "response": "Ātra un patīkama komunikācija"
+    },
+    "features": [
+      {
+        "title": "Mobilo un web lietotņu eksperti",
+        "description": "Native iOS/Android un responsīvas web lietotnes, fokusā veiktspēja un pieejamība."
+      },
+      {
+        "title": "Drošas un mērogojamas arhitektūras",
+        "description": "CI/CD, novērojamība un atbilstība, lai relīzes būtu prognozējamas."
+      },
+      {
+        "title": "Integrācijas un analītika",
+        "description": "API, datu plūsmas un telemetrija, kas savieno platformas un sniedz ieskatu."
+      },
+      {
+        "title": "Izaugsmei vērsta piegāde",
+        "description": "Izpēte, MVP un iteratīvas relīzes, kas saslēgtas ar biznesa KPI."
+      }
+    ],
+    "capabilities": [
+      {
+        "icon": "🚀",
+        "title": "Gatavs lietošanai",
+        "body": "Produktu izveide no prototipa līdz fantastiskam gala produktam."
+      },
+      {
+        "icon": "📊",
+        "title": "Dati pie rokas",
+        "body": "Notikumu uzskaite, analītika un atskaites, lai redzētu ietekmi reāllaikā."
+      },
+      {
+        "icon": "🛡️",
+        "title": "Drošība vispirms",
+        "body": "Droša autentifikācija, lietotāju pārvaldība un atbilstība jau arhitektūrā."
+      }
+    ]
+  },
+  "technologies": {
+    "title": "Tehnoloģijas, kuras izmantojam",
+    "subtitle": "Paraugs no mūsu pamata steka — atbalstām vēl daudz citas bibliotēkas un platformas.",
+    "stack": [
+      "Nuxt 3",
+      "Vue 3",
+      "TypeScript",
+      "Tailwind CSS",
+      "Three.js",
+      "Node.js",
+      "Firebase",
+      "Supabase"
+    ]
+  },
+  "services": {
+    "title": "Ko piedāvājam",
+    "subtitle": "No idejas līdz uzturēšanai – fokusējamies uz veiktspēju, pieejamību un drošību.",
+    "items": [
+      {
+        "title": "Mobilo lietotņu izstrāde",
+        "description": "Izstrādājam ērtas un ātras mobilās lietotnes iPhone un Android ierīcēm, kas ļauj sasniegt klientus tieši viņu telefonos, nodrošina stabilu darbību un ir gatavas izaugsmei."
+      },
+      {
+        "title": "Web platformas",
+        "description": "Veidojam mūsdienīgas mājaslapas, portālus un vadības paneļus, kas stiprina jūsu uzņēmuma tēlu, ir droši lietojami un pieejami no jebkuras ierīces."
+      },
+      {
+        "title": "SaaS produkti",
+        "description": "Izstrādājam abonēšanas tipa digitālos produktus, kas nodrošina regulārus ieņēmumus, vienkāršu klientu pārvaldību un iespēju biznesam augt bez tehniskiem šķēršļiem."
+      },
+      {
+        "title": "Dizaina sistēmas",
+        "description": "Izveidojam vienotu dizaina pieeju, kas padara jūsu digitālos risinājumus atpazīstamus, viegli uzturamus un ļauj ātrāk ieviest jaunas funkcijas."
+      },
+      {
+        "title": "Iekšējās sistēmas",
+        "description": "Automatizējam iekšējos procesus ar pielāgotiem rīkiem, kas samazina manuālo darbu, novērš kļūdas un sniedz vadībai skaidru pārskatu par uzņēmuma darbību."
+      },
+      {
+        "title": "Tehniskā konsultācija",
+        "description": "Sniedzam skaidru tehnisko konsultāciju, kas palīdz pieņemt pamatotus lēmumus, uzlabot sistēmu veiktspēju un samazināt ilgtermiņa izmaksas."
+      }
+    ]
+  },
+ 
+  "testimonials": {
+    "title": "Ko saka klienti",
+    "subtitle": "Pārdomātas sadarbības pieredzes no produktu un inženieru komandām.",
+    "badge": "Klientu uzticība",
+    "highlight": "Ilgtermiņa partnerība un skaidra piegāde",
+    "items": [
+      {
+        "quote": "MobWebTech prototipi tika pārvērsti pilnībā ražošanai gatavās lietotāju plūsmās, nezaudējot kvalitāti. Komanda konsekventi domā biznesa kategorijās, nevis tikai tehniskā izpildījuma līmenī.",
+        "name": "Laura Mežkalne",
+        "role": "Produktu vadītāja, FlowNav",
+        "initials": "LM"
+      },
+      {
+        "quote": "Komanda precīzi identificēja riskus, ieviesa sistēmas novērojamību un nodrošināja stabilas piegādes bez kavējumiem. Viņu izstrādātā arhitektūra rada uzticību ilgtermiņā.",
+        "name": "Dmitry Volkonsky",
+        "role": "CTO, Atlas Cloud",
+        "initials": "DV"
+      },
+      {
+        "quote": "Dizaina un izstrādes saskaņotība ir viņu galvenā priekšrocība. Lietotāji ātri saprata produktu, un mēs varējām operatīvi validēt tirgus pieprasījumu.",
+        "name": "Anna Peterson",
+        "role": "Līdzdibinātāja, MobWebTech Health",
+        "initials": "AP"
+      },
+      {
+        "quote": "MobWebTech ienesa skaidrību produkta attīstības plānā un palīdzēja uzturēt stabilu tempu, balstoties uz saprotāmiem un izmērāmiem iterāciju mērķiem.",
+        "name": "Henrik Hussfelt",
+        "role": "Product Owner, Baltic Mobility",
+        "initials": "RO"
+      },
+      {
+        "quote": "Detalizētais tehniskais audits ļāva pārbūvēt API bez dīkstāves un būtiski uzlabot sistēmas veiktspēju – par aptuveni 40%.",
+        "name": "Edgars Klauve",
+        "role": "Engineering Manager, Nord Fintech",
+        "initials": "MK"
+      },
+      {
+        "quote": "Komanda proaktīvi paredzēja riskus un vienmēr atgriezās ar praktiskiem, īstenojamiem risinājumiem, nevis tikai problēmu uzskaitījumu.",
+        "name": "Mārtiņš B.",
+        "role": "Programmu direktors, AirWave",
+        "initials": "KL"
+      },
+      {
+        "quote": "Izstrādātās vizualizācijas un 3D elementi būtiski atviegloja pārdošanas procesu, jo prototipus varējām demonstrēt bez garām un sarežģītām prezentācijām.",
+        "name": "Elīna Jansone",
+        "role": "Marketinga vadītāja, Vivid IoT",
+        "initials": "EJ"
+      },
+      {
+        "quote": "Komanda ātri izveidoja komponentu sistēmu, kas kļuva par pamatu un kvalitātes standartu arī citiem mūsu produktiem.",
+        "name": "Anna Bērziņa",
+        "role": "Head of Product Design, Lumen Apps",
+        "initials": "MD"
+      },
+      {
+        "quote": "Atvērta komunikācija, caurspīdīgas izmaksas un piegādes grafiks, uz kuru varējām paļauties katrā sprintā.",
+        "name": "Astrīda Zaļkalne",
+        "role": "COO, Baltic Freight",
+        "initials": "SG"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Parunāsim?",
+    "subtitle": "Pastāstiet par ideju vai problēmu, ko vēlaties atrisināt.",
+    "addressLabel": "Adrese",
+    "phoneLabel": "Tālrunis",
+    "emailLabel": "E-pasts",
+    "form": {
+      "name": "Vārds",
+      "email": "E-pasts",
+      "message": "Ziņa",
+      "submit": "Nosūtīt pieprasījumu",
+      "sending": "Sūtām...",
+      "success": "Paldies! Atbildēsim vienas darba dienas laikā.",
+      "sendAnother": "Nosūtīt vēl vienu ziņu",
+      "error": "Neizdevās nosūtīt ziņu. Lūdzu, mēģiniet vēlreiz."
+    }
+  },
+  "footer": {
+    "tagline": "Radām produktus, kas iesaista, pārliecina un izaug kopā ar biznesu."
+  }
+}
